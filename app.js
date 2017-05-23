@@ -35,7 +35,7 @@ app.get('/new/:urlToShorten(*)', (req, res) => {
   }
 }); //(*) for resolve http issue
 
-app.get('/:urlToFoward', (req, res)=>{
+app.get('/url/:urlToFoward', (req, res)=>{
   var shorterUrl = req.params.urlToFoward;
   shortUrl.findOne({'shortUrl': shorterUrl}, function(err, data){
     var re = new RegExp("^(http|https)://", "i");
