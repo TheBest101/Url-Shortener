@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<head>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <link rel="stylesheet" type="text/css" href="style.css">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+  <script>
+    $(document).ready(function(){
+      $('#input').keypress(function(e){
+        var inp = $('#input').val();
+        $('#shortUrl').attr('href', 'https://url-shortening-alexander.herokuapp.com/new/' + inp)
+      })
+    })
+
+  </script>
+</head>
+<html>
+  <body>
+    <h2 id="test">hello world</h2>
+    <h1> Url Shortener Microservice</h1>
+    <h3>by Alex Dao (with help from Coding Tutorial 360)</h3>
+    <h4><a href="https://www.freecodecamp.com" target="_blank">
+      Freecodecamp Project with Node, Express, MongoDB, Mongoose, Javascript, HTML, CSS3, Bootstrap
+    </a></h4>
+    <article>
+      <input placeholder="Enter URL" id="input">
+      <a id="shortUrl" href="https://url-shortening-alexander.herokuapp.com/"  class="btn btn-primary">Get ShortURL</a>
+    </article>
+  </body>
+</html>
