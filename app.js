@@ -7,8 +7,8 @@ const shortUrl = require('./models/shortUrl.js')
 
 app.use(bodyParser.json());
 app.use(cors());
-
-mongoose.connect(process.env.MONGOLAB_URI || 'mongodb://localhost/shortUrls');
+//process.env.MONGOLAB_URI || 'mongodb://localhost/shortUrls'
+mongoose.connect('mongodb://HelloWorld:TheBest101@ds149491.mlab.com:49491/url-shortening-alexander');
 
 
 app.get('/new/:urlToShorten(*)', (req, res) => {
