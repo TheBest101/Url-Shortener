@@ -32,6 +32,12 @@ app.get('/new/:urlToShorten(*)', (req, res) => {
       }
     });
     return res.json({data})
+  }else{
+    return res.json({
+      originalUrl: urlToShorten,
+      shortUrl: null,
+      error: true
+    })
   }
 }); //(*) for resolve http issue
 
