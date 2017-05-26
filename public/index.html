@@ -7,6 +7,7 @@
     $(document).ready(function(){
       $('#input').keypress(function(e){
         var inp = $('#input').val();
+        $("#output").html(inp)
         $('#shortUrl').attr('href', 'https://url-shortening-alexander.herokuapp.com/new/' + inp)
       })
     })
@@ -24,6 +25,7 @@
     <article>
       <input placeholder="Enter URL" id="input">
       <a id="shortUrl" href="https://url-shortening-alexander.herokuapp.com/"  class="btn btn-primary">Get ShortURL</a>
+      <p>Url: <span id="output">N/A</span></p>
     </article>
   </body>
 </html>
